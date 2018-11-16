@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Survey Form</title>
+
+    <style type="text/css">
+      html,
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to top right, #47d1e0, pink);
+        background-repeat: no-repeat;
+        text-align: center;
+        margin: 0;
+      }
+
+      #form-outer {
+        margin: 50px auto 112px;
+        width: 80%;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: white;
+        opacity: 0.9;
+      }
+
+      .labels {
+        display: inline-block;
+        text-align: right;
+        width: 40%;
+        margin-top: 10px;
+      }
+
+      input {
+        position: relative;
+      }
+
+      .rtmobile {
+        position: relative;
+        top: 10px;
+      }
+
+      .right-tab {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+        margin-left: 10px;
+        text-align: left;
+      }
+
+      @media (min-width: 992px) {
+        .right-tab {
+          display: inline-block;
+          width: 48%;
+          vertical-align: top;
+          margin-left: 10px;
+          text-align: left;
+        }
+      }
+
+      #name,
+      #email,
+      #age,
+      select {
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        #name,
+        #email,
+        #age,
+        select {
+          width: 70%;
+        }
+      }
+
+      @media (min-width: 992px) {
+        #name,
+        #email,
+        #age,
+        select {
+          width: 70%;
+        }
+      }
+
+      .radio,
+      .checkbox {
+        position: relative;
+        left: -43px;
+        display: block;
+      }
+
+      .user-ratings {
+        float: left;
+      }
+
+      textarea {
+        vertical-align: top;
+        height: 75px;
+        width: 90%;
+        padding: 5px;
+        margin: 10px 10px 10px 0;
+      }
+
+      @media (min-width: 768px) {
+        textarea {
+          width: 70%;
+        }
+      }
+
+      @media (min-width: 992px) {
+        textarea {
+          width: 70%;
+        }
+      }
+
+      #submit {
+        border-radius: 7%;
+        padding: 5px;
+        width: 75px;
+        height: 40px;
+        border: none;
+        background-color: #47d1e0;
+        font-size: 1rem;
+        cursor: pointer;
+        border: 1px solid pink;
+      }
+
+      #submit:hover {
+        background-color: pink;
+        border: 1px solid #47d1e0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <div id="form-outer">
+      <p id="description">Let me know how I can improve my website</p>
+      <form id="survey-form">
+        <div class="row">
+          <div class="labels">
+            <label for="name" id="name-label">* Name:</label>
+          </div>
+          <div class="right-tab rtmobile">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="labels">
+            <label for="email" id="email-label">* Email:</label>
+          </div>
+          <div class="right-tab rtmobile">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="labels">
+            <label for="Age" id="number-label">* Age:</label>
+          </div>
+          <div class="right-tab rtmobile">
+            <input
+              type="number"
+              name="age"
+              id="age"
+              placeholder="Age"
+              min="1"
+              max="100"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="labels">
+            <label>Which option best describes your current role?</label>
+          </div>
+          <div class="right-tab rtmobile">
+            <select id="dropdown">
+              <option value="student">Recruiter</option>
+              <option value="full-time">Web Developer</option>
+              <option value="part-time">Student</option>
+              <option value="freelancer">Freelancer</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labels">
+            <label for="Recommendation"
+              >* How likely is it that you would recommend my website to a
+              friend?</label
+            >
+          </div>
+          <div class="right-tab">
+            <ul style="list-style: none">
+              <li>
+                <label class="radio"
+                  >Definitely<input
+                    type="radio"
+                    name="recommendation"
+                    value="1"
+                    class="user-ratings"
+                    checked
+                /></label>
+              </li>
+              <li>
+                <label class="radio"
+                  >Maybe<input
+                    type="radio"
+                    name="recommendation"
+                    value="2"
+                    class="user-ratings"
+                /></label>
+              </li>
+              <li>
+                <label class="radio"
+                  >Not sure<input
+                    type="radio"
+                    name="recommendation"
+                    value="3"
+                    class="user-ratings"
+                /></label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labels">
+            <label for="Like-most">
+              What do you like most about my website:
+            </label>
+          </div>
+          <div class="right-tab rtmobile">
+            <select id="Like-most">
+              <option value="color">Color</option>
+              <option value="layout">Layout</option>
+              <option value="content">Content</option>
+              <option value="responsiveness">Responsiveness</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labels">
+            <label for="Things to be improved"
+              >Things to be improved in the future (check all that apply):
+            </label>
+          </div>
+          <div class="right-tab">
+            <ul style="list-style: none;">
+              <li class="checkbox">
+                <label id="checkbox-label"
+                  ><input
+                    type="checkbox"
+                    name="improvement"
+                    value="color"
+                  />Color</label
+                >
+              </li>
+              <li class="checkbox">
+                <label id="checkbox-label"
+                  ><input
+                    type="checkbox"
+                    name="improvement"
+                    value="layout"
+                  />Layout</label
+                >
+              </li>
+              <li class="checkbox">
+                <label id="checkbox-label"
+                  ><input
+                    type="checkbox"
+                    name="improvement"
+                    value="content"
+                  />Content</label
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labels">
+            <label for="comments">Any comments or suggestions?</label>
+          </div>
+          <div class="right-tab">
+            <textarea
+              name="comments"
+              id="comments"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+        </div>
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </div>
+  </body>
+</html>
